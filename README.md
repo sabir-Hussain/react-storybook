@@ -1,8 +1,18 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
-
 ## Available Scripts
 
 In the project directory, you can run:
+
+## Step One
+Run this inside your existing project’s root directory:
+### `git clone https://github.com/sabir-Hussain/react-storybook.git`
+
+## Step Two
+Go to this file path "react-storybook" and run storybook
+
+### `npm run storybook`
+
+## For the button component follow this path
+react-storybook/src/Buttons
 
 ### `yarn start`
 
