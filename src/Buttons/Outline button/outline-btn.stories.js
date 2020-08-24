@@ -2,7 +2,7 @@ import React from 'react';
 import Button from './outline-btn'
 
 export default {
-    title: 'Compontes/xiQ-Button/Outline',
+    title: 'Compontes/xiQ-Button',
     component: Button,
     
 };
