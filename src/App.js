@@ -1,5 +1,4 @@
 import React from 'react';
-import logo from './logo.svg';
 import FilledButton from './Buttons/Filled button/FilledBtn'
 import OutlineButton from './Buttons/Outline button/OutlineBtn'
 import './App.css';

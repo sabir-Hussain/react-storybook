@@ -3,11 +3,19 @@ import PropTypes from 'prop-types';
 import './filled-btn.css'
 
  
-export const FilledButton = ({type,size, label, ...props }) => {
+export const FilledButton = ({type, size, label, ...props }) => {
+
+  let btnType;
+  if(type === 'filled'){
+    btnType = `storybook-button c-btn-${type}`
+  }else if(type === 'outline'){
+    btnType = `storybook-button c-btn-outline-${type}`
+  }
+
     return (
       <button
         type="button"
-        className={[`storybook-button c-btn-${type}`, `storybook-button--${size}`,].join(' ')}
+        className={[btnType, `storybook-button--${size}`,].join(' ')}
         {...props}
       >
         {label}
