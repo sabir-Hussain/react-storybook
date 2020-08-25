@@ -2,7 +2,7 @@ import React from 'react';
 import Button from './FilledBtn'
 
 export default {
-    title: 'Compontes/xiQ-Button/Filled',
+    title: 'Compontes/xiQ-Button',
     component: Button,
     
 };
