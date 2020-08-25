@@ -1,21 +1,21 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import './filled-btn.css'
+import './Button.css'
 
  
-export const FilledButton = ({type, size, label, ...props }) => {
+export const Button = ({type,color, size, label, ...props }) => {
 
   let btnType;
   if(type === 'filled'){
-    btnType = `storybook-button c-btn-${type}`
+    btnType = `c-btn-${color}`
   }else if(type === 'outline'){
-    btnType = `storybook-button c-btn-outline-${type}`
+    btnType = `c-btn-outline-${color}`
   }
 
     return (
       <button
         type="button"
-        className={[btnType, `storybook-button--${size}`,].join(' ')}
+        className={['c-btn', btnType, `storybook-button--${size}`,].join(' ')}
         {...props}
       >
         {label}
@@ -23,15 +23,19 @@ export const FilledButton = ({type, size, label, ...props }) => {
     );
   };
 
-FilledButton.propTypes = {
+Button.propTypes = {
     /**
      * What background color to use
      */
-    type: PropTypes.oneOf(['info', 'success','danger','warning']),
+    color: PropTypes.oneOf(['info', 'success','danger','warning']),
     /**
      * How large should the button be?
      */
     size: PropTypes.oneOf(['default','small', 'large']),
+    /**
+     * Button type
+     */
+    type: PropTypes.oneOf(['filled','outline']),
     /**
      * Button contents
      */
@@ -43,10 +47,11 @@ FilledButton.propTypes = {
     onClick: PropTypes.func,
 };
 
-FilledButton.defaultProps = {
+Button.defaultProps = {
     size: 'default',
     onClick: undefined,
-    type:'default'
+    color:'default',
+    type: 'filled'
 };
   
-export default FilledButton
+export default Button
