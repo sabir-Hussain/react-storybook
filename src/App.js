@@ -1,24 +1,14 @@
 import React from 'react';
 import logo from './logo.svg';
+import FilledButton from './Buttons/Filled button/FilledBtn'
+import OutlineButton from './Buttons/Outline button/OutlineBtn'
 import './App.css';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+     <FilledButton label='xiq button' type='warning' size='large'/>
+     <OutlineButton label='xiq button' type='danger' size='large'/>
     </div>
   );
 }
